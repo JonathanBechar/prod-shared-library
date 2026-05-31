@@ -5,8 +5,7 @@ def call(Map config = [:]) {
         stages {
             stage('Checkout') {
                 steps {
-                    echo "Checking out source code..."
-                    checkout scm
+                    git branch: 'main', url: 'https://github.com/JonathanBechar/prod-shared-library.git'
                 }
             }
 
